@@ -73,7 +73,9 @@ body {
 		color: $clr-primary;
 
 		svg {
-			width: 75%;
+			transform: scale(1);
+			transform-origin: center;
+			object-fit: contain;
 		}
 	}
 
@@ -94,6 +96,10 @@ body {
 		&__icon {
 			margin-bottom: 44px;
 			width: 85px;
+
+			svg {
+				transform: scale(0.85);
+			}
 		}
 
 		&__title {
@@ -112,6 +118,10 @@ body {
 		&__icon {
 			margin-bottom: 37px;
 			width: 75px;
+
+			svg {
+				transform: scale(0.75);
+			}
 		}
 
 		&__title {

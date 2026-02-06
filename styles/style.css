@@ -60,7 +60,10 @@ body {
   color: #ff4343;
 }
 .feature__icon svg {
-  width: 75%;
+  transform: scale(1);
+  transform-origin: center;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .feature__title {
   margin-bottom: 42px;
@@ -83,6 +86,9 @@ body {
     margin-bottom: 44px;
     width: 85px;
   }
+  .feature__icon svg {
+    transform: scale(0.85);
+  }
   .feature__title {
     margin-bottom: 23px;
     font-size: 18px;
@@ -102,6 +108,9 @@ body {
   .feature__icon {
     margin-bottom: 37px;
     width: 75px;
+  }
+  .feature__icon svg {
+    transform: scale(0.75);
   }
   .feature__title {
     margin-bottom: 9px;
