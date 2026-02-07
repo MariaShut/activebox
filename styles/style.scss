@@ -1,0 +1,268 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// colors
+$clr-light: #fff;
+$clr-dark: #2d3033;
+$clr-base-ltr: #c6cbcd;
+$clr-base-lt: #babbc5;
+$clr-base: #6c7279;
+$clr-base-dk: #2d3033;
+$clr-primary: #ff4343;
+$clr-primary-dk: #e71414;
+// font
+$ff-base: 'Raleway', sans-serif;
+$fs-base: 18px;
+$fs-md: 24px;
+
+$general-transition: all 0.3s ease-in-out;
+
+@mixin font($fontSize, $lineHeight, $fontWeight: 400) {
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	font-weight: $fontWeight;
+}
+
+body {
+	font-family: $ff-base;
+	color: $clr-dark;
+}
+
+.container {
+	max-width: 1210px;
+	padding: 0 20px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+// WORKS
+
+.works {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	max-width: 1520px;
+	gap: 2px;
+	margin: 0 auto;
+
+	@media (max-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+	}
+}
+
+.work {
+	position: relative;
+	max-width: 378px;
+	width: 100%;
+	overflow: hidden;
+	aspect-ratio: 378 / 340;
+	// border: 2px solid $clr-light;
+
+	&__image {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__content {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		background: rgba(255, 67, 67, 0.8);
+		color: $clr-light;
+
+		opacity: 0;
+		visibility: hidden;
+		transition: $general-transition;
+
+		.work:hover & {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.work:active & {
+			background: rgba(185, 12, 12, 0.8);
+		}
+	}
+
+	&__title {
+		margin-bottom: 36px;
+		@include font($fs-md, 28px, 900);
+		text-transform: uppercase;
+	}
+
+	&__text {
+		@include font($fs-base, 21px);
+	}
+
+	@media (max-width: 1024px) {
+		max-width: 256px;
+		aspect-ratio: 256 / 230;
+
+		&__title {
+			margin-bottom: 22px;
+			@include font(18px, 21px, 900);
+		}
+
+		&__text {
+			@include font(14px, 16px);
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__title {
+			margin-bottom: 7px;
+		}
+	}
+}
+
+// TEAM
+
+.team {
+	padding: 153px 0 114px;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 30px;
+	}
+
+	&__image {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		margin-bottom: 5px;
+		@include font($fs-md, 28px, 700);
+		text-transform: capitalize;
+	}
+
+	&__subtitle {
+		margin-bottom: 18px;
+		@include font($fs-base, 21px);
+		color: $clr-primary;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		margin-bottom: 38px;
+		@include font(14px, 16px);
+		color: $clr-base;
+	}
+
+	@media (max-width: 1024px) {
+		padding: 78px 0;
+
+		&__title {
+			@include font(18px, 21px, 700);
+		}
+
+		&__subtitle {
+			margin-bottom: 22px;
+			@include font(14px, 16px);
+		}
+
+		&__text {
+			margin-bottom: 39px;
+			@include font(14px, 16px);
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 35px 0 41px;
+
+		&__container {
+			grid-template-columns: 280px;
+			justify-content: center;
+			row-gap: 49px;
+		}
+
+		&__image {
+			max-width: 280px;
+		}
+
+		&__subtitle {
+			margin-bottom: 38px;
+		}
+
+		&__text {
+			margin-bottom: 55px;
+		}
+	}
+}
+
+.social {
+	display: flex;
+	column-gap: 5px;
+	list-style: none;
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 39px;
+		aspect-ratio: 1 / 1;
+		border: 1px solid $clr-base-ltr;
+		color: $clr-base-ltr;
+		transition: $general-transition;
+
+		svg {
+			transition: $general-transition;
+		}
+
+		&:focus {
+			border-color: $clr-primary;
+			outline: none;
+		}
+
+		&:hover {
+			border-color: $clr-primary;
+
+			svg {
+				color: $clr-primary;
+			}
+		}
+
+		&:active {
+			border-color: $clr-primary-dk;
+			box-shadow: inset 0 0 10px 0 #ff4343;
+
+			svg {
+				color: $clr-primary-dk;
+			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+		&__link {
+			width: 33px;
+
+			svg {
+				transform: scale(0.841);
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__link {
+			width: 39px;
+
+			svg {
+				transform: scale(1);
+			}
+		}
+	}
+}
