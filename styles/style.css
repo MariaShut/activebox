@@ -23,10 +23,9 @@ body {
   gap: 2px;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .works {
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
   }
 }
 
@@ -36,6 +35,12 @@ body {
   width: 100%;
   overflow: hidden;
   aspect-ratio: 378/340;
+}
+@media (max-width: 1024px) {
+  .work {
+    max-width: 256px;
+    aspect-ratio: 256/230;
+  }
 }
 .work__image {
   display: flex;
@@ -54,6 +59,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
   background: rgba(255, 67, 67, 0.8);
   color: #fff;
   opacity: 0;
@@ -74,36 +80,44 @@ body {
   font-weight: 900;
   text-transform: uppercase;
 }
-.work__text {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-}
 @media (max-width: 1024px) {
-  .work {
-    max-width: 256px;
-    aspect-ratio: 256/230;
-  }
   .work__title {
     margin-bottom: 22px;
     font-size: 18px;
     line-height: 21px;
     font-weight: 900;
   }
+}
+@media (max-width: 767px) {
+  .work__title {
+    margin-bottom: 7px;
+  }
+}
+.work__text {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+@media (max-width: 1024px) {
   .work__text {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
   }
 }
-@media (max-width: 768px) {
-  .work__title {
-    margin-bottom: 7px;
-  }
-}
 
 .team {
   padding: 153px 0 114px;
+}
+@media (max-width: 1024px) {
+  .team {
+    padding: 78px 0;
+  }
+}
+@media (max-width: 767px) {
+  .team {
+    padding: 35px 0 41px;
+  }
 }
 .team__container {
   display: grid;
@@ -111,9 +125,24 @@ body {
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
+@media (max-width: 767px) {
+  .team__container {
+    grid-template-columns: 280px;
+    justify-content: center;
+    row-gap: 49px;
+  }
+}
 .team__image {
   width: 100%;
   margin-bottom: 30px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  .team__image {
+    aspect-ratio: 280/227;
+  }
 }
 .team__title {
   margin-bottom: 5px;
@@ -121,6 +150,13 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: capitalize;
+}
+@media (max-width: 1024px) {
+  .team__title {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+  }
 }
 .team__subtitle {
   margin-bottom: 18px;
@@ -130,6 +166,19 @@ body {
   color: #ff4343;
   text-transform: uppercase;
 }
+@media (max-width: 1024px) {
+  .team__subtitle {
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 767px) {
+  .team__subtitle {
+    margin-bottom: 38px;
+  }
+}
 .team__text {
   margin-bottom: 38px;
   font-size: 14px;
@@ -138,20 +187,6 @@ body {
   color: #6c7279;
 }
 @media (max-width: 1024px) {
-  .team {
-    padding: 78px 0;
-  }
-  .team__title {
-    font-size: 18px;
-    line-height: 21px;
-    font-weight: 700;
-  }
-  .team__subtitle {
-    margin-bottom: 22px;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 400;
-  }
   .team__text {
     margin-bottom: 39px;
     font-size: 14px;
@@ -159,21 +194,7 @@ body {
     font-weight: 400;
   }
 }
-@media (max-width: 768px) {
-  .team {
-    padding: 35px 0 41px;
-  }
-  .team__container {
-    grid-template-columns: 280px;
-    justify-content: center;
-    row-gap: 49px;
-  }
-  .team__image {
-    max-width: 280px;
-  }
-  .team__subtitle {
-    margin-bottom: 38px;
-  }
+@media (max-width: 767px) {
   .team__text {
     margin-bottom: 55px;
   }
@@ -195,8 +216,28 @@ body {
   color: #c6cbcd;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 1024px) {
+  .social__link {
+    width: 33px;
+  }
+}
+@media (max-width: 767px) {
+  .social__link {
+    width: 39px;
+  }
+}
 .social__link svg {
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1024px) {
+  .social__link svg {
+    transform: scale(0.841);
+  }
+}
+@media (max-width: 767px) {
+  .social__link svg {
+    transform: scale(1);
+  }
 }
 .social__link:focus {
   border-color: #ff4343;
@@ -214,20 +255,4 @@ body {
 }
 .social__link:active svg {
   color: #e71414;
-}
-@media (max-width: 1024px) {
-  .social__link {
-    width: 33px;
-  }
-  .social__link svg {
-    transform: scale(0.841);
-  }
-}
-@media (max-width: 768px) {
-  .social__link {
-    width: 39px;
-  }
-  .social__link svg {
-    transform: scale(1);
-  }
 }/*# sourceMappingURL=style.css.map */

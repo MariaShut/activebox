@@ -47,9 +47,8 @@ body {
 	gap: 2px;
 	margin: 0 auto;
 
-	@media (max-width: 768px) {
+	@media (max-width: 767px) {
 		grid-template-columns: repeat(2, 1fr);
-		justify-items: center;
 	}
 }
 
@@ -59,7 +58,11 @@ body {
 	width: 100%;
 	overflow: hidden;
 	aspect-ratio: 378 / 340;
-	// border: 2px solid $clr-light;
+
+	@media (max-width: 1024px) {
+		max-width: 256px;
+		aspect-ratio: 256 / 230;
+	}
 
 	&__image {
 		display: flex;
@@ -79,6 +82,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		padding: 10px;
 
 		background: rgba(255, 67, 67, 0.8);
 		color: $clr-light;
@@ -101,29 +105,22 @@ body {
 		margin-bottom: 36px;
 		@include font($fs-md, 28px, 900);
 		text-transform: uppercase;
-	}
 
-	&__text {
-		@include font($fs-base, 21px);
-	}
-
-	@media (max-width: 1024px) {
-		max-width: 256px;
-		aspect-ratio: 256 / 230;
-
-		&__title {
+		@media (max-width: 1024px) {
 			margin-bottom: 22px;
 			@include font(18px, 21px, 900);
 		}
 
-		&__text {
-			@include font(14px, 16px);
+		@media (max-width: 767px) {
+			margin-bottom: 7px;
 		}
 	}
 
-	@media (max-width: 768px) {
-		&__title {
-			margin-bottom: 7px;
+	&__text {
+		@include font($fs-base, 21px);
+
+		@media (max-width: 1024px) {
+			@include font(14px, 16px);
 		}
 	}
 }
@@ -133,21 +130,45 @@ body {
 .team {
 	padding: 153px 0 114px;
 
+	@media (max-width: 1024px) {
+		padding: 78px 0;
+	}
+
+	@media (max-width: 767px) {
+		padding: 35px 0 41px;
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		column-gap: 30px;
+
+		@media (max-width: 767px) {
+			grid-template-columns: 280px;
+			justify-content: center;
+			row-gap: 49px;
+		}
 	}
 
 	&__image {
 		width: 100%;
 		margin-bottom: 30px;
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+
+		@media (max-width: 767px) {
+			aspect-ratio: 280 / 227;
+		}
 	}
 
 	&__title {
 		margin-bottom: 5px;
 		@include font($fs-md, 28px, 700);
 		text-transform: capitalize;
+
+		@media (max-width: 1024px) {
+			@include font(18px, 21px, 700);
+		}
 	}
 
 	&__subtitle {
@@ -155,50 +176,28 @@ body {
 		@include font($fs-base, 21px);
 		color: $clr-primary;
 		text-transform: uppercase;
+
+		@media (max-width: 1024px) {
+			margin-bottom: 22px;
+			@include font(14px, 16px);
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 38px;
+		}
 	}
 
 	&__text {
 		margin-bottom: 38px;
 		@include font(14px, 16px);
 		color: $clr-base;
-	}
 
-	@media (max-width: 1024px) {
-		padding: 78px 0;
-
-		&__title {
-			@include font(18px, 21px, 700);
-		}
-
-		&__subtitle {
-			margin-bottom: 22px;
-			@include font(14px, 16px);
-		}
-
-		&__text {
+		@media (max-width: 1024px) {
 			margin-bottom: 39px;
 			@include font(14px, 16px);
 		}
-	}
 
-	@media (max-width: 768px) {
-		padding: 35px 0 41px;
-
-		&__container {
-			grid-template-columns: 280px;
-			justify-content: center;
-			row-gap: 49px;
-		}
-
-		&__image {
-			max-width: 280px;
-		}
-
-		&__subtitle {
-			margin-bottom: 38px;
-		}
-
-		&__text {
+		@media (max-width: 767px) {
 			margin-bottom: 55px;
 		}
 	}
@@ -219,8 +218,24 @@ body {
 		color: $clr-base-ltr;
 		transition: $general-transition;
 
+		@media (max-width: 1024px) {
+			width: 33px;
+		}
+
+		@media (max-width: 767px) {
+			width: 39px;
+		}
+
 		svg {
 			transition: $general-transition;
+
+			@media (max-width: 1024px) {
+				transform: scale(0.841);
+			}
+
+			@media (max-width: 767px) {
+				transform: scale(1);
+			}
 		}
 
 		&:focus {
@@ -242,26 +257,6 @@ body {
 
 			svg {
 				color: $clr-primary-dk;
-			}
-		}
-	}
-
-	@media (max-width: 1024px) {
-		&__link {
-			width: 33px;
-
-			svg {
-				transform: scale(0.841);
-			}
-		}
-	}
-
-	@media (max-width: 768px) {
-		&__link {
-			width: 39px;
-
-			svg {
-				transform: scale(1);
 			}
 		}
 	}
