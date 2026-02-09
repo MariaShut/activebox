@@ -60,9 +60,11 @@ body {
 	text-transform: uppercase;
 	transition: all 0.3s ease-in-out;
 }
+
 .btn:hover {
 	background-color: #e71414;
 }
+
 .btn:active {
 	box-shadow: 4px 4px 30px 0 #ff4343;
 	background: #ff4343;
@@ -72,9 +74,19 @@ body {
 	background-color: $clr-testimonials-bg;
 	color: $clr-light;
 
+	@media (max-width: 767px) {
+		padding-bottom: 95px;
+	}
+
 	&__container {
 		display: flex;
 		column-gap: 31px;
+
+		@media (max-width: 767px) {
+			flex-direction: column;
+			align-items: center;
+			row-gap: 25px;
+		}
 	}
 
 	&__image {
@@ -82,6 +94,17 @@ body {
 		flex: 0 1 50%;
 		max-width: 50%;
 		object-fit: cover;
+
+		@media (max-width: 1024px) {
+			max-height: 332px;
+		}
+
+		@media (max-width: 767px) {
+			width: 100%;
+			max-width: 100%;
+			max-height: 218px;
+			object-fit: cover;
+		}
 	}
 
 	&__content {
@@ -90,7 +113,11 @@ body {
 		justify-content: center;
 		flex: 0 1 50%;
 		max-width: 50%;
-		// padding: 116px 0;
+
+		@media (max-width: 767px) {
+			max-width: 100%;
+			text-align: center;
+		}
 	}
 
 	&__quote {
@@ -98,52 +125,36 @@ body {
 		@include font(36px, 49px);
 		text-transform: capitalize;
 		margin-bottom: 20px;
+
+		@media (max-width: 1024px) {
+			@include font(24px, 32px);
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__author {
 		@include font(13px, 15px, 700);
 		text-transform: uppercase;
-	}
 
-	@media (max-width: 1024px) {
-		&__image {
-			max-height: 332px;
-		}
-		&__quote {
-			@include font(24px, 32px);
-		}
-
-		&__author {
+		@media (max-width: 1024px) {
 			@include font(12px, 14px, 700);
-		}
-	}
-
-	@media (max-width: 768px) {
-		padding-bottom: 95px;
-
-		&__image {
-			max-width: 280px;
-		}
-
-		&__content {
-			max-width: 100%;
-			text-align: center;
-		}
-
-		&__container {
-			flex-direction: column;
-			align-items: center;
-			row-gap: 25px;
-		}
-
-		&__quote {
-			margin-bottom: 15px;
 		}
 	}
 }
 
 .download {
 	padding: 132px 0 114px;
+
+	@media (max-width: 1024px) {
+		padding: 93px 0 78px;
+	}
+
+	@media (max-width: 767px) {
+		padding: 64px 0 45px;
+	}
 
 	&__container {
 		text-align: center;
@@ -153,51 +164,43 @@ body {
 		margin-bottom: 22px;
 		@include font(30px, 35px, 500);
 		text-transform: capitalize;
+
+		@media (max-width: 1024px) {
+			margin-bottom: 20px;
+			@include font(24px, 28px, 500);
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 11px;
+			@include font(18px, 21px, 500);
+		}
 	}
 
 	&__descr {
 		margin-bottom: 50px;
 		@include font($fs-base, 21px, 700);
 		text-transform: uppercase;
-	}
 
-	&__btn {
-		max-width: 369px;
-	}
-
-	@media (max-width: 1024px) {
-		padding: 93px 0 78px;
-
-		&__title {
-			margin-bottom: 20px;
-			@include font(24px, 28px, 500);
-		}
-
-		&__descr {
+		@media (max-width: 1024px) {
 			margin-bottom: 45px;
 			@include font(14px, 16px, 700);
 		}
 
-		&__btn {
-			@include font(18px, 21px, 900);
-			max-width: 313px;
-		}
-	}
-
-	@media (max-width: 768px) {
-		padding: 64px 0 45px;
-
-		&__title {
-			margin-bottom: 11px;
-			@include font(18px, 21px, 500);
-		}
-
-		&__descr {
+		@media (max-width: 767px) {
 			margin-bottom: 13px;
 			@include font(13px, 15px, 700);
 		}
+	}
 
-		&__btn {
+	&__btn {
+		max-width: 369px;
+
+		@media (max-width: 1024px) {
+			@include font(18px, 21px, 900);
+			max-width: 313px;
+		}
+
+		@media (max-width: 767px) {
 			max-width: 280px;
 		}
 	}
