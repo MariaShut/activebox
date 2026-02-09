@@ -19,6 +19,16 @@ body {
 .features {
   padding: 109px 0 116px;
 }
+@media (max-width: 1024px) {
+  .features {
+    padding: 78px 0 80px;
+  }
+}
+@media (max-width: 767px) {
+  .features {
+    padding: 40px 0 35px;
+  }
+}
 .features__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -27,19 +37,13 @@ body {
   row-gap: 88px;
 }
 @media (max-width: 1024px) {
-  .features {
-    padding: 78px 0 80px;
-  }
   .features__wrapper {
     -moz-column-gap: 20px;
          column-gap: 20px;
     row-gap: 50px;
   }
 }
-@media (max-width: 768px) {
-  .features {
-    padding: 40px 0 35px;
-  }
+@media (max-width: 767px) {
   .features__wrapper {
     grid-template-columns: 1fr;
     row-gap: 41px;
@@ -48,7 +52,6 @@ body {
 
 .feature {
   text-align: center;
-  max-width: 370px;
 }
 .feature__icon {
   display: flex;
@@ -59,11 +62,33 @@ body {
   aspect-ratio: 1/1;
   color: #ff4343;
 }
+@media (max-width: 1024px) {
+  .feature__icon {
+    margin-bottom: 44px;
+    width: 85px;
+  }
+}
+@media (max-width: 767px) {
+  .feature__icon {
+    margin-bottom: 37px;
+    width: 75px;
+  }
+}
 .feature__icon svg {
   transform: scale(1);
   transform-origin: center;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 1024px) {
+  .feature__icon svg {
+    transform: scale(0.85);
+  }
+}
+@media (max-width: 767px) {
+  .feature__icon svg {
+    transform: scale(0.75);
+  }
 }
 .feature__title {
   margin-bottom: 42px;
@@ -72,6 +97,19 @@ body {
   font-weight: 900;
   text-transform: uppercase;
 }
+@media (max-width: 1024px) {
+  .feature__title {
+    margin-bottom: 23px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 900;
+  }
+}
+@media (max-width: 767px) {
+  .feature__title {
+    margin-bottom: 9px;
+  }
+}
 .feature__text {
   font-size: 18px;
   line-height: 21px;
@@ -79,40 +117,9 @@ body {
   color: #6c7279;
 }
 @media (max-width: 1024px) {
-  .feature {
-    max-width: 315px;
-  }
-  .feature__icon {
-    margin-bottom: 44px;
-    width: 85px;
-  }
-  .feature__icon svg {
-    transform: scale(0.85);
-  }
-  .feature__title {
-    margin-bottom: 23px;
-    font-size: 18px;
-    line-height: 21px;
-    font-weight: 900;
-  }
   .feature__text {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
-  }
-}
-@media (max-width: 768px) {
-  .feature {
-    max-width: 100%;
-  }
-  .feature__icon {
-    margin-bottom: 37px;
-    width: 75px;
-  }
-  .feature__icon svg {
-    transform: scale(0.75);
-  }
-  .feature__title {
-    margin-bottom: 9px;
   }
 }/*# sourceMappingURL=style.css.map */

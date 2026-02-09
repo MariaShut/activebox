@@ -33,26 +33,26 @@ body {
 .features {
 	padding: 109px 0 116px;
 
+	@media (max-width: 1024px) {
+		padding: 78px 0 80px;
+	}
+
+	@media (max-width: 767px) {
+		padding: 40px 0 35px;
+	}
+
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: 30px;
 		row-gap: 88px;
-	}
 
-	@media (max-width: 1024px) {
-		padding: 78px 0 80px;
-
-		&__wrapper {
+		@media (max-width: 1024px) {
 			column-gap: 20px;
 			row-gap: 50px;
 		}
-	}
 
-	@media (max-width: 768px) {
-		padding: 40px 0 35px;
-
-		&__wrapper {
+		@media (max-width: 767px) {
 			grid-template-columns: 1fr;
 			row-gap: 41px;
 		}
@@ -61,7 +61,6 @@ body {
 
 .feature {
 	text-align: center;
-	max-width: 370px;
 
 	&__icon {
 		display: flex;
@@ -72,10 +71,28 @@ body {
 		aspect-ratio: 1 / 1;
 		color: $clr-primary;
 
+		@media (max-width: 1024px) {
+			margin-bottom: 44px;
+			width: 85px;
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 37px;
+			width: 75px;
+		}
+
 		svg {
 			transform: scale(1);
 			transform-origin: center;
 			object-fit: contain;
+
+			@media (max-width: 1024px) {
+				transform: scale(0.85);
+			}
+
+			@media (max-width: 767px) {
+				transform: scale(0.75);
+			}
 		}
 	}
 
@@ -83,49 +100,23 @@ body {
 		margin-bottom: 42px;
 		@include font($fs-md, 28px, 900);
 		text-transform: uppercase;
+
+		@media (max-width: 1024px) {
+			margin-bottom: 23px;
+			@include font(18px, 21px, 900);
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 9px;
+		}
 	}
 
 	&__text {
 		@include font($fs-base, 21px);
 		color: $clr-base;
-	}
 
-	@media (max-width: 1024px) {
-		max-width: 315px;
-
-		&__icon {
-			margin-bottom: 44px;
-			width: 85px;
-
-			svg {
-				transform: scale(0.85);
-			}
-		}
-
-		&__title {
-			margin-bottom: 23px;
-			@include font(18px, 21px, 900);
-		}
-
-		&__text {
+		@media (max-width: 1024px) {
 			@include font(14px, 16px);
-		}
-	}
-
-	@media (max-width: 768px) {
-		max-width: 100%;
-
-		&__icon {
-			margin-bottom: 37px;
-			width: 75px;
-
-			svg {
-				transform: scale(0.75);
-			}
-		}
-
-		&__title {
-			margin-bottom: 9px;
 		}
 	}
 }
