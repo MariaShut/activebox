@@ -375,7 +375,7 @@
 		</div>
 
 		<div class="testimonials" id="testimonials">
-			<div class="container testimonials__container testimonials__swiper swiper">
+			<div class="testimonials__swiper swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide testimonials__slide">
 						<img src="assets/testimonial.jpg" alt="discussion" class="testimonials__image" />
@@ -471,6 +471,8 @@
 			const swiper = new Swiper('.testimonials__swiper', {
 				// Optional parameters
 				loop: true,
+				slidesPerView: 'auto',
+				centeredSlides: true,
 
 				// If we need pagination
 				pagination: {

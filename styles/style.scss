@@ -133,7 +133,7 @@ body {
 		}
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 767px) {
 		&__link {
 			width: 39px;
 
@@ -488,17 +488,18 @@ body {
 		}
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 767px) {
 		padding: 35px 0 41px;
 
 		&__container {
-			grid-template-columns: 280px;
+			grid-template-columns: 1fr;
 			justify-content: center;
 			row-gap: 49px;
 		}
 
 		&__image {
-			max-width: 280px;
+			aspect-ratio: 280 / 227;
+			object-fit: cover;
 		}
 
 		&__subtitle {
@@ -530,7 +531,6 @@ body {
 
 .testimonials {
 	color: $clr-light;
-	// background-color: $clr-testimonials;
 
 	@media (max-width: 767px) {
 		padding-bottom: 95px;
@@ -546,16 +546,21 @@ body {
 		}
 	}
 
+	.swiper-wrapper {
+		background-color: $clr-testimonials;
+	}
+
 	&__slide {
 		display: flex;
 		column-gap: 31px;
 		padding: 0 20px;
-		background-color: $clr-testimonials;
+		max-width: 1210px;
 
 		@media (max-width: 767px) {
 			flex-direction: column;
 			align-items: center;
 			row-gap: 25px;
+			padding-bottom: 95px;
 		}
 	}
 
