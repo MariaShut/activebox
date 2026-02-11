@@ -37,192 +37,12 @@ body {
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
-
 .btn:hover {
   background-color: #e71414;
 }
-
 .btn:active {
   box-shadow: 4px 4px 30px 0 #ff4343;
   background: #ff4343;
-}
-
-.testimonials {
-  background-color: #5c3249;
-  color: #fff;
-}
-@media (max-width: 767px) {
-  .testimonials {
-    padding-bottom: 95px;
-  }
-}
-.testimonials__container {
-  display: flex;
-  -moz-column-gap: 31px;
-       column-gap: 31px;
-}
-@media (max-width: 767px) {
-  .testimonials__container {
-    flex-direction: column;
-    align-items: center;
-    row-gap: 25px;
-  }
-}
-.testimonials__image {
-  display: flex;
-  flex: 0 1 50%;
-  max-width: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 1024px) {
-  .testimonials__image {
-    max-height: 332px;
-  }
-}
-@media (max-width: 767px) {
-  .testimonials__image {
-    width: 100%;
-    max-width: 100%;
-    max-height: 218px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-.testimonials__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 0 1 50%;
-  max-width: 50%;
-}
-@media (max-width: 767px) {
-  .testimonials__content {
-    max-width: 100%;
-    text-align: center;
-  }
-}
-.testimonials__quote {
-  font-size: 36px;
-  line-height: 49px;
-  font-weight: 400;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-}
-@media (max-width: 1024px) {
-  .testimonials__quote {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 400;
-  }
-}
-@media (max-width: 767px) {
-  .testimonials__quote {
-    margin-bottom: 15px;
-  }
-}
-.testimonials__author {
-  font-size: 13px;
-  line-height: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-@media (max-width: 1024px) {
-  .testimonials__author {
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 700;
-  }
-}
-
-.download {
-  padding: 132px 0 114px;
-}
-@media (max-width: 1024px) {
-  .download {
-    padding: 93px 0 78px;
-  }
-}
-@media (max-width: 767px) {
-  .download {
-    padding: 64px 0 45px;
-  }
-}
-.download__container {
-  text-align: center;
-}
-.download__title {
-  margin-bottom: 22px;
-  font-size: 30px;
-  line-height: 35px;
-  font-weight: 500;
-  text-transform: capitalize;
-}
-@media (max-width: 1024px) {
-  .download__title {
-    margin-bottom: 20px;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 500;
-  }
-}
-@media (max-width: 767px) {
-  .download__title {
-    margin-bottom: 11px;
-    font-size: 18px;
-    line-height: 21px;
-    font-weight: 500;
-  }
-}
-.download__descr {
-  margin-bottom: 50px;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-@media (max-width: 1024px) {
-  .download__descr {
-    margin-bottom: 45px;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 700;
-  }
-}
-@media (max-width: 767px) {
-  .download__descr {
-    margin-bottom: 13px;
-    font-size: 13px;
-    line-height: 15px;
-    font-weight: 700;
-  }
-}
-.download__btn {
-  max-width: 369px;
-}
-@media (max-width: 1024px) {
-  .download__btn {
-    font-size: 18px;
-    line-height: 21px;
-    font-weight: 900;
-    max-width: 313px;
-  }
-}
-@media (max-width: 767px) {
-  .download__btn {
-    max-width: 280px;
-  }
-@media (max-width: 1024px) {
-  .btn {
-    padding: 26px;
-    max-width: 314px;
-  }
-}
-@media (max-width: 767px) {
-  .btn {
-    padding: 15px;
-    max-width: 280px;
-  }
 }
 
 .btn-reset {
@@ -673,5 +493,172 @@ body {
   }
   .social__link svg {
     transform: scale(1);
+  }
+}
+
+.testimonials {
+  background-color: #5c3249;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .testimonials {
+    padding-bottom: 95px;
+  }
+}
+.testimonials__container {
+  display: flex;
+  -moz-column-gap: 31px;
+       column-gap: 31px;
+}
+@media (max-width: 767px) {
+  .testimonials__container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+  }
+}
+.testimonials__image {
+  display: flex;
+  flex: 0 1 50%;
+  max-width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .testimonials__image {
+    max-height: 332px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonials__image {
+    width: 100%;
+    max-width: 100%;
+    max-height: 218px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.testimonials__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 1 50%;
+  max-width: 50%;
+}
+@media (max-width: 767px) {
+  .testimonials__content {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+.testimonials__quote {
+  font-size: 36px;
+  line-height: 49px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+@media (max-width: 1024px) {
+  .testimonials__quote {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 767px) {
+  .testimonials__quote {
+    margin-bottom: 15px;
+  }
+}
+.testimonials__author {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .testimonials__author {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+  }
+}
+
+.download {
+  padding: 132px 0 114px;
+}
+@media (max-width: 1024px) {
+  .download {
+    padding: 93px 0 78px;
+  }
+}
+@media (max-width: 767px) {
+  .download {
+    padding: 64px 0 45px;
+  }
+}
+.download__container {
+  text-align: center;
+}
+.download__title {
+  margin-bottom: 22px;
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+@media (max-width: 1024px) {
+  .download__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 767px) {
+  .download__title {
+    margin-bottom: 11px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+}
+.download__descr {
+  margin-bottom: 50px;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .download__descr {
+    margin-bottom: 45px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 767px) {
+  .download__descr {
+    margin-bottom: 13px;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 700;
+  }
+}
+.download__btn {
+  max-width: 369px;
+}
+@media (max-width: 1024px) {
+  .download__btn {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 900;
+    max-width: 313px;
+  }
+}
+@media (max-width: 767px) {
+  .download__btn {
+    max-width: 280px;
   }
 }/*# sourceMappingURL=style.css.map */
