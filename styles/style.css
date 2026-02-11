@@ -6,6 +6,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
+  color: #2d3033;
 }
 
 .container {
@@ -15,6 +16,92 @@ body {
   width: 100%;
 }
 
+.features {
+  padding: 109px 0 116px;
+}
+@media (max-width: 1024px) {
+  .features {
+    padding: 78px 0 80px;
+  }
+}
+@media (max-width: 767px) {
+  .features {
+    padding: 40px 0 35px;
+  }
+}
+.features__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 88px;
+}
+@media (max-width: 1024px) {
+  .features__wrapper {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .features__wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 41px;
+  }
+}
+
+.feature {
+  text-align: center;
+}
+.feature__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 51px;
+  width: 100px;
+  aspect-ratio: 1/1;
+  color: #ff4343;
+}
+@media (max-width: 1024px) {
+  .feature__icon {
+    margin-bottom: 44px;
+    width: 85px;
+  }
+}
+@media (max-width: 767px) {
+  .feature__icon {
+    margin-bottom: 37px;
+    width: 75px;
+  }
+}
+.feature__icon svg {
+  transform: scale(1);
+  transform-origin: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1024px) {
+  .feature__icon svg {
+    transform: scale(0.85);
+  }
+}
+@media (max-width: 767px) {
+  .feature__icon svg {
+    transform: scale(0.75);
+  }
+}
+.feature__title {
+  margin-bottom: 42px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .feature__title {
+    margin-bottom: 23px;
+    font-size: 18px;
+    line-height: 21px;
 .btn {
   display: block;
   margin: 0 auto;
@@ -176,6 +263,18 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .feature__title {
+    margin-bottom: 9px;
+  }
+}
+.feature__text {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #6c7279;
+}
+@media (max-width: 1024px) {
+  .feature__text {
   .hero__title {
     margin-bottom: 40px;
     font-size: 36px;
