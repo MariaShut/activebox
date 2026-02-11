@@ -505,13 +505,14 @@ body {
     padding-bottom: 95px;
   }
 }
-.testimonials__container {
+.testimonials__slide {
   display: flex;
   -moz-column-gap: 31px;
        column-gap: 31px;
+  padding: 0 20px;
 }
 @media (max-width: 767px) {
-  .testimonials__container {
+  .testimonials__slide {
     flex-direction: column;
     align-items: center;
     row-gap: 25px;

@@ -521,9 +521,10 @@ body {
 		padding-bottom: 95px;
 	}
 
-	&__container {
+	&__slide {
 		display: flex;
 		column-gap: 31px;
+		padding: 0 20px;
 
 		@media (max-width: 767px) {
 			flex-direction: column;

@@ -6,6 +6,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="styles/style.css" />
 		<title>ACTIVEBOX</title>
 	</head>
@@ -374,12 +375,31 @@
 		</div>
 
 		<div class="testimonials">
-			<div class="container testimonials__container">
-				<img src="assets/testimonial.jpg" alt="discussion" class="testimonials__image" />
-				<div class="testimonials__content">
-					<p class="testimonials__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
-					<p class="testimonials__author">Susan Sims, Interaction Designer at XYZ</p>
+			<div class="swiper container testimonials__container testimonials__swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide testimonials__slide">
+						<img src="assets/testimonial.jpg" alt="discussion" class="testimonials__image" />
+						<div class="testimonials__content">
+							<p class="testimonials__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+							<p class="testimonials__author">Susan Sims, Interaction Designer at XYZ</p>
+						</div>
+					</div>
+					<div class="swiper-slide testimonials__slide">
+						<img src="assets/testimonial.jpg" alt="discussion" class="testimonials__image" />
+						<div class="testimonials__content">
+							<p class="testimonials__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+							<p class="testimonials__author">Susan Sims, Interaction Designer at XYZ</p>
+						</div>
+					</div>
+					<div class="swiper-slide testimonials__slide">
+						<img src="assets/testimonial.jpg" alt="discussion" class="testimonials__image" />
+						<div class="testimonials__content">
+							<p class="testimonials__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+							<p class="testimonials__author">Susan Sims, Interaction Designer at XYZ</p>
+						</div>
+					</div>
 				</div>
+				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 
@@ -445,5 +465,18 @@
 				</p>
 			</div>
 		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<script>
+			const swiper = new Swiper('.testimonials__swiper', {
+				// Optional parameters
+				loop: true,
+
+				// If we need pagination
+				pagination: {
+					el: '.swiper-pagination',
+				},
+			});
+		</script>
 	</body>
 </html>
