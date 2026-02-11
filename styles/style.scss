@@ -387,7 +387,6 @@ body {
 
 .work {
 	position: relative;
-	max-width: 378px;
 	width: 100%;
 	overflow: hidden;
 	aspect-ratio: 378 / 340;
@@ -433,6 +432,30 @@ body {
 			background: rgba(185, 12, 12, 0.8);
 		}
 	}
+
+	&__title {
+		margin-bottom: 36px;
+		@include font(24px, 28px, 900);
+		text-transform: uppercase;
+
+		@media (max-width: 1024px) {
+			margin-bottom: 22px;
+			@include font(18px, 21px, 900);
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 7px;
+		}
+	}
+
+	&__text {
+		@include font(18px, 21px);
+		text-transform: capitalize;
+
+		@media (max-width: 1024px) {
+			@include font(14px, 16px);
+		}
+	}
 }
 
 // TEAM
@@ -449,6 +472,7 @@ body {
 	&__image {
 		width: 100%;
 		margin-bottom: 30px;
+		aspect-ratio: 1 / 1;
 	}
 
 	&__title {
@@ -546,15 +570,12 @@ body {
 		}
 	}
 
-	.swiper-wrapper {
-		background-color: $clr-testimonials;
-	}
-
 	&__slide {
 		display: flex;
+		justify-content: center;
 		column-gap: 31px;
 		padding: 0 20px;
-		max-width: 1210px;
+		background-color: $clr-testimonials;
 
 		@media (max-width: 767px) {
 			flex-direction: column;
@@ -567,7 +588,7 @@ body {
 	&__image {
 		display: flex;
 		flex: 0 1 50%;
-		max-width: 50%;
+		max-width: 570px;
 		object-fit: cover;
 
 		@media (max-width: 1024px) {
@@ -587,7 +608,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		flex: 0 1 50%;
-		max-width: 50%;
+		max-width: 570px;
 
 		@media (max-width: 767px) {
 			max-width: 100%;
