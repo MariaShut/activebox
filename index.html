@@ -374,8 +374,8 @@
 			</div>
 		</div>
 
-		<div class="testimonials">
-			<div class="swiper container testimonials__container testimonials__swiper">
+		<div class="testimonials" id="testimonials">
+			<div class="container testimonials__container testimonials__swiper swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide testimonials__slide">
 						<img src="assets/testimonial.jpg" alt="discussion" class="testimonials__image" />
@@ -475,6 +475,7 @@
 				// If we need pagination
 				pagination: {
 					el: '.swiper-pagination',
+					clickable: true,
 				},
 			});
 		</script>

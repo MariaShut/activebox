@@ -8,7 +8,7 @@ $clr-base-dk: #2d3033;
 $clr-primary: #ff4343;
 $clr-primary-dk: #e71414;
 
-$clr-testimonials-bg: #5c3249;
+$clr-testimonials: #5c3249;
 $clr-footer-bg: #353c65;
 $clr-footer-bg-dk: #2c3154;
 $clr-footer-text: #808080;
@@ -513,18 +513,44 @@ body {
 
 // TESTIMONIALS
 
+#testimonials {
+	.swiper-pagination-bullet {
+		width: 14px;
+		height: 14px;
+		border: 1px solid $clr-testimonials;
+		background-color: transparent;
+		margin: 0;
+		opacity: 1;
+
+		&-active {
+			background-color: $clr-testimonials;
+		}
+	}
+}
+
 .testimonials {
-	background-color: $clr-testimonials-bg;
 	color: $clr-light;
+	// background-color: $clr-testimonials;
 
 	@media (max-width: 767px) {
 		padding-bottom: 95px;
+	}
+
+	&__swiper {
+		padding: 0 0 45px;
+		.swiper-pagination {
+			bottom: 0;
+			display: flex;
+			justify-content: center;
+			column-gap: 25px;
+		}
 	}
 
 	&__slide {
 		display: flex;
 		column-gap: 31px;
 		padding: 0 20px;
+		background-color: $clr-testimonials;
 
 		@media (max-width: 767px) {
 			flex-direction: column;
